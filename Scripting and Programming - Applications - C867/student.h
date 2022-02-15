@@ -1,18 +1,26 @@
+//student.h
+//
+//
+// Created by Paul Overfelt for WGU C867
+#pragma once
 #include <iostream>
-#include <string>
 #include "degree.h"
+#include <vector>
 using namespace std;
 
-class Student {
-	public
+class Student 
+{
+	public:
 		//getters
 		string getStudentId();
 		string getFirstName();
 		string getLastName();
 		string getEmail();
 		int getAge();
-		int* getDaysInCourse();
-		DegreeProgram getDegreeType();
+		int getDaysInCourse1();
+		int getDaysInCourse2();
+		int getDaysInCourse3();
+		string getDegreeType();
 
 		//setters
 		void setStudentID(string);
@@ -20,15 +28,25 @@ class Student {
 		void setLastName(string);
 		void setEmail(string);
 		void setAge(int);
-		void setDaysInCourse(int[3]);
+		void setDaysInCourse(int, int, int);
 		void setDegreeType(DegreeProgram);
+		void print();
 
 		//constructor
-		Student(string, string, string, string, int, int*, DegreeProgram);
+		//empty construtor
+		Student();
+		//fill param constructor
+		Student(string studentId, string firstName, string lastName, string email, int age, int daysInCourse1, int daysInCourse2, int daysIncourse3 , DegreeProgram DegreeType);
+		//destructor
 		~Student();
 
-		private
-			string studentId, firstName, lastName, email;
-			int age, daysInCourse[3];
+
+	private:
+			string studentId;
+			string firstName;
+			string lastName;
+			string email;
+			int age;
+			vector<int> daysInCourse;
 			DegreeProgram DegreeType;
 };
