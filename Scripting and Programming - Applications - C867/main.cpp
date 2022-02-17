@@ -15,13 +15,16 @@ int main()
 	"A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
 	"A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
 	"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-	"A5,Paul,Overfelt,poverfe@wgu.edu,30,30,35,40,SOFTWARE" };
+	"A5,Paul,Overfelt,poverfe@my.wgu.edu,30,30,35,40,SOFTWARE" };
 
 	//creates a roster object
 	roster classRoster;
 
+	//find size of provided studentData to use a limit on the following loops
+	int studentDataLength = sizeof(studentData) / sizeof(studentData[0]);
+
 	//fills the classRoster roster object with data from the studentData array
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < studentDataLength; i++)
 	{
 		classRoster.parse(studentData[i]);
 	}
@@ -38,7 +41,7 @@ int main()
 
 	//Prints the average days in course for each student in classRoster
 	cout << "Print Average Days In Course" << endl;
-	for (int i=0; i < 5; i++)
+	for (int i=0; i < studentDataLength; i++)
 	{
 		classRoster.printAverageDaysInCourse(classRoster.classRosterArray[i].getStudentId());
 	}

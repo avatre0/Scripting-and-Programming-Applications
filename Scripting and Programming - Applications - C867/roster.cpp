@@ -42,18 +42,18 @@ void roster::parse(string studentData)
 
 	lhs = rhs + 1;
 	rhs = studentData.find(",", lhs);
-	string degreeprogramS = studentData.substr(lhs, rhs - lhs);
+	string degreeProgramS = studentData.substr(lhs, rhs - lhs);
 
 	DegreeProgram degreeprogram;
-	if (degreeprogramS == "SECURITY")
+	if (degreeProgramS == "SECURITY")
 	{
 		degreeprogram = SECURITY;
 	}
-	if (degreeprogramS == "NETWORK")
+	if (degreeProgramS == "NETWORK")
 	{
 		degreeprogram = NETWORK;
 	}
-	if (degreeprogramS == "SOFTWARE")
+	if (degreeProgramS == "SOFTWARE")
 	{
 		degreeprogram = SOFTWARE;
 	}

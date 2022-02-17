@@ -81,13 +81,12 @@ string Student::getDegreeType()
 			return "NETWORK";
 			break;
 	case SOFTWARE:
-		return "SOFTWARE";
+			return "SOFTWARE";
 			break;
 	default:
 		break;
 	}
 }
-
 
 //Setters
 void Student::setStudentID(string id)
@@ -141,7 +140,7 @@ void Student::print()
 	cout << getStudentId() << "\t";
 	cout << "First Name: " << getFirstName() << "\t";
 	cout << "Last Name: " << getLastName() << "\t";
-	cout << "Email: " << getEmail() << "\t";
+//	cout << "Email: " << getEmail() << "\t";
 	cout << "Age: " << getAge() << "\t";
 	cout << "Days in Course: ";
 	cout << "{" << getDaysInCourse1();

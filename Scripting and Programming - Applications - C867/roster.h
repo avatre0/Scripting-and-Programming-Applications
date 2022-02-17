@@ -6,7 +6,6 @@
 #include "student.h"
 #include <sstream>
 
-
 class roster {
 	public:
 		void parse(string studentData); //constructor call
